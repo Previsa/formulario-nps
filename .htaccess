@@ -1,0 +1,26 @@
+# Define o índice padrão para o diretório
+DirectoryIndex index.php
+
+# Ativa a reescrita de URL
+RewriteEngine On
+RewriteBase /formulario-nps/
+
+# Redireciona todas as requisições para o index.php, exceto se o arquivo ou diretório existir
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
+
+# Configurações de segurança básicas
+Options -Indexes
+
+php_value max_execution_time 10000
+
+<Files .htaccess>
+Order Allow,Deny
+Deny from all
+</Files>
+
+<FilesMatch "\.(env|ini|yaml|yml|json|lock|xml)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>

@@ -1,0 +1,24 @@
+{
+  "name": "nps/formulario",
+  "description": "Aplicação web para envio e processamento de formulários Net Promoter Score (NPS)",
+  "type": "project",
+  "require": {
+    "phpmailer/phpmailer": "^6.5",
+    "phpoffice/phpspreadsheet": "^2.2",
+    "vlucas/phpdotenv": "^5.4",
+    "ramsey/uuid": "^4.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Src\\": "src/"
+    }
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Virginia Alcantara",
+      "email": "virginiaalcantara@previsa.com.br"
+    }
+  ],
+  "minimum-stability": "stable"
+}
